@@ -36,6 +36,8 @@ Coded by www.creative-tim.com
 */
 
 // Soft UI Dashboard React layouts
+import Welcome from "layouts/welcome";
+import ViewPatient from "layouts/dashboard";
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
@@ -54,8 +56,28 @@ import SpaceShip from "examples/Icons/SpaceShip";
 import CustomerSupport from "examples/Icons/CustomerSupport";
 import CreditCard from "examples/Icons/CreditCard";
 import Cube from "examples/Icons/Cube";
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import SickIcon from '@mui/icons-material/Sick';
 
 const routes = [
+  {
+    type: "collapse",
+    name: "Welcome",
+    key: "welcome",
+    route: "/welcome",
+    icon: <LocalHospitalIcon size="12px" />,
+    component: <Welcome />,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "View Patient",
+    key: "view-patient",
+    route: "/view-patient",
+    icon: <SickIcon size="12px" />,
+    component: <ViewPatient />,
+    noCollapse: true,
+  },
   {
     type: "collapse",
     name: "Dashboard",
@@ -83,25 +105,8 @@ const routes = [
     component: <Billing />,
     noCollapse: true,
   },
-  {
-    type: "collapse",
-    name: "Virtual Reality",
-    key: "virtual-reality",
-    route: "/virtual-reality",
-    icon: <Cube size="12px" />,
-    component: <VirtualReality />,
-    noCollapse: true,
-  },
-  {
-    type: "collapse",
-    name: "RTL",
-    key: "rtl",
-    route: "/rtl",
-    icon: <Settings size="12px" />,
-    component: <RTL />,
-    noCollapse: true,
-  },
-  { type: "title", title: "Account Pages", key: "account-pages" },
+
+  { type: "title", title: "Admin Pages", key: "account-pages" },
   {
     type: "collapse",
     name: "Profile",
