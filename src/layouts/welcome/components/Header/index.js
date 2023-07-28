@@ -139,11 +139,11 @@ function Header() {
               <br />
               </SoftTypography>
               <SoftTypography variant="button" color="text" fontWeight="medium">
-              To view a patient, click on that button and then drop your patient data file on the window.
+              To view a patient, click on the <u>View Patient button</u> and then drop your patient data file on the window.
               <br />
               </SoftTypography>
               <SoftTypography variant="button" color="text" fontWeight="medium">
-              To create a new patient, click on the Create Patient button on the left and begin charting.
+              To create a new patient, click on the <u>Create Patient button</u> on the left and begin charting.
               <br /></SoftTypography>
             </SoftBox>
           </Grid>
