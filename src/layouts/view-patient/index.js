@@ -26,6 +26,8 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
+import MiniStatisticsCardIconLeft from "examples/Cards/StatisticsCards/MiniStatisticsCardIconLeft";
+
 import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 
@@ -52,12 +54,12 @@ function Dashboard() {
       <SoftBox py={3}>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "today's money" }}
-                count="$53,000"
-                percentage={{ color: "success", text: "+55%" }}
-                icon={{ color: "info", component: "paid" }}
+            <Grid item xs={12} sm={6}>
+              <MiniStatisticsCardIconLeft
+                title={{ text: "Patient Name" }}
+                count="LASTNAME, FIRSTNAME"
+                percentage={{ color: "info", text: "03/05/1945" }}
+                icon={{ color: "info", component: "sick" }}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
@@ -76,17 +78,7 @@ function Dashboard() {
                 icon={{ color: "info", component: "emoji_events" }}
               />
             </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "sales" }}
-                count="$103,430"
-                percentage={{ color: "success", text: "+5%" }}
-                icon={{
-                  color: "info",
-                  component: "shopping_cart",
-                }}
-              />
-            </Grid>
+          
           </Grid>
         </SoftBox>
         <SoftBox mb={3}>
