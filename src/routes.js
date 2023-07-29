@@ -38,6 +38,8 @@ Coded by www.creative-tim.com
 // Soft UI Dashboard React layouts
 import Welcome from "layouts/welcome";
 import ViewPatient from "layouts/dashboard";
+import CreatePatient from "layouts/dashboard";
+import Quality from "layouts/dashboard";
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
@@ -58,6 +60,8 @@ import CreditCard from "examples/Icons/CreditCard";
 import Cube from "examples/Icons/Cube";
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import SickIcon from '@mui/icons-material/Sick';
+import TroubleshootIcon from '@mui/icons-material/Troubleshoot';
+import SsidChartIcon from '@mui/icons-material/SsidChart';
 
 const routes = [
   {
@@ -74,7 +78,25 @@ const routes = [
     name: "View Patient",
     key: "view-patient",
     route: "/view-patient",
+    icon: <TroubleshootIcon size="12px" />,
+    component: <ViewPatient />,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Create Patient",
+    key: "create-patient",
+    route: "/create-patient",
     icon: <SickIcon size="12px" />,
+    component: <ViewPatient />,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Quality",
+    key: "quality",
+    route: "/quality",
+    icon: <SsidChartIcon size="12px" />,
     component: <ViewPatient />,
     noCollapse: true,
   },

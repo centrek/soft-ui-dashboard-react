@@ -43,7 +43,7 @@ function SidenavCard() {
           height="2rem"
           borderRadius="md"
           shadow="md"
-          mb={2}
+          mb={1}
           sx={cardIconBox}
         >
           <Icon fontSize="medium" sx={(theme) => cardIcon(theme, { sidenavColor })}>
@@ -51,24 +51,24 @@ function SidenavCard() {
           </Icon>
         </SoftBox>
         <SoftBox lineHeight={1}>
-          <SoftTypography variant="h6" color="white">
+          <SoftTypography variant="h5" fontWeight="medium" color="white">
             Need help?
           </SoftTypography>
-          <SoftBox mb={1.825} mt={-1}>
-            <SoftTypography variant="caption" color="white" fontWeight="medium">
-              Please check our docs
+          <SoftBox mb={1} mt={-1}>
+            <SoftTypography variant="button" color="white" fontWeight="medium">
+              Please email us at
             </SoftTypography>
           </SoftBox>
           <SoftButton
             component={Link}
-            href="https://www.creative-tim.com/learning-lab/react/quick-start/soft-ui-dashboard/"
+            href="mailto:help@tomcd.io"
             target="_blank"
             rel="noreferrer"
             size="small"
             color="white"
             fullWidth
           >
-            documentation
+            help@tomcd.io
           </SoftButton>
         </SoftBox>
       </CardContent>

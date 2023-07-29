@@ -78,11 +78,11 @@ function Overview() {
             <Grid item xs>
             <SoftBox mb={3}>
               <SoftTypography variant="button" fontWeight="regular" color="text">
-                <u>Week 1</u>
-                <li>Change the footer</li>
-                <li>Fix Logo on SideNav</li>
+                <u>Week 1 - Began 7/28/2023</u>
+                <li><s>Change the footer</s></li>
+                <li><s>Fix Logo on SideNav</s></li>
                 <li>Design Basic Layout</li>
-                <li>Adjust Navigation to include Welcome, View, Create, Quality</li>
+                <li><s>Adjust Navigation to include Welcome, View, Create, Quality</s></li>
                 <li>Build Structure for displaying patient info</li>
                 <li>Populate and lock down on Create Patient</li>
                 <li>Add in dropping of .tommy</li>

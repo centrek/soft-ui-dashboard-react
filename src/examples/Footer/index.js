@@ -68,11 +68,11 @@ function Footer({ company, links }) {
         </SoftBox>
         by
         <Link href={href} target="_blank">
-          <SoftTypography variant="button" fontWeight="medium">
-            &nbsp;{name}&nbsp;
+          <SoftTypography fontSize={size.sm} fontWeight="medium">
+            &nbsp;Tom & Matt&nbsp;
           </SoftTypography>
         </Link>
-        for a better web.
+        for better patient care.
       </SoftBox>
       <SoftBox
         component="ul"
@@ -99,13 +99,14 @@ function Footer({ company, links }) {
 
 // Setting default values for the props of Footer
 Footer.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "https://www.tomcd.io/", name: "TomCD.io - The GameChanger with Instant-Output" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Creative Tim" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "https://www.tomcd.io/", name: "TomCD.io - The GameChanger with Instant-Output" },
+ //   { href: "https://www.creative-tim.com/presentation", name: "About Us" },
+ //   { href: "https://www.creative-tim.com/blog", name: "Blog" },
+ //   { href: "https://www.creative-tim.com/license", name: "License" },
   ],
+  
 };
 
 // Typechecking props for the Footer
