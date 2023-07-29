@@ -29,18 +29,12 @@ import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Authentication layout components
 import Footer from "layouts/authentication/components/Footer";
+import brandLogo from "assets/images/logos/TomCD_Logo1_Transparent.png"
 
 function CoverLayout({ color, header, title, description, image, top, children }) {
   return (
     <PageLayout background="white">
-      <DefaultNavbar
-        action={{
-          type: "external",
-          route: "https://creative-tim.com/product/soft-ui-dashboard-react",
-          label: "free download",
-          color: "dark",
-        }}
-      />
+      
       <Grid
         container
         justifyContent="center"
@@ -55,6 +49,10 @@ function CoverLayout({ color, header, title, description, image, top, children }
               {!header ? (
                 <>
                   <SoftBox mb={1}>
+                  <SoftBox my={-5} mb={-1} >
+          {brandLogo && <SoftBox component="img" src={brandLogo} alt="TomCD Logo" width="calc(50%)"
+ />}
+          </SoftBox>
                     <SoftTypography variant="h3" fontWeight="bold" color={color} textGradient>
                       {title}
                     </SoftTypography>

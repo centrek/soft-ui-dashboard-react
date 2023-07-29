@@ -81,6 +81,7 @@ function Overview() {
                 <u>Week 1 - Began 7/28/2023</u>
                 <li><s>Change the footer</s></li>
                 <li><s>Fix Logo on SideNav</s></li>
+                <li><s>Style Sign-In Page</s></li>
                 <li>Design Basic Layout</li>
                 <li><s>Adjust Navigation to include Welcome, View, Create, Quality</s></li>
                 <li>Build Structure for displaying patient info</li>

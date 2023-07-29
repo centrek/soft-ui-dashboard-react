@@ -34,7 +34,7 @@ import Socials from "layouts/authentication/components/Socials";
 import Separator from "layouts/authentication/components/Separator";
 
 // Images
-import curved6 from "assets/images/curved-images/curved14.jpg";
+import curved6 from "assets/images/curved-images/curved-6.jpg";
 
 function SignUp() {
   const [agreement, setAgremment] = useState(true);
@@ -44,20 +44,20 @@ function SignUp() {
   return (
     <BasicLayout
       title="Welcome!"
-      description="Use these awesome forms to login or create new account in your project for free."
+      description="Use of the TomCD portal is reserved for Authorized Clinicians only."
+      description2="Enter your CREDENTIALS and PASSCODE below to register."
+      headliner="WARNING: TomCD is a restricted webpage. Patient data enclosed."
       image={curved6}
     >
       <Card>
-        <SoftBox p={3} mb={1} textAlign="center">
+        <SoftBox p={1} mb={0} textAlign="center">
           <SoftTypography variant="h5" fontWeight="medium">
             Register with
           </SoftTypography>
         </SoftBox>
         <SoftBox mb={2}>
-          <Socials />
         </SoftBox>
-        <Separator />
-        <SoftBox pt={2} pb={3} px={3}>
+        <SoftBox pt={0} pb={3} px={3}>
           <SoftBox component="form" role="form">
             <SoftBox mb={2}>
               <SoftInput placeholder="Name" />
@@ -66,7 +66,10 @@ function SignUp() {
               <SoftInput type="email" placeholder="Email" />
             </SoftBox>
             <SoftBox mb={2}>
-              <SoftInput type="password" placeholder="Password" />
+              <SoftInput type="password" placeholder="Choose a Password" />
+            </SoftBox>
+            <SoftBox mb={2}>
+              <SoftInput type="passcode" placeholder="PASSCODE" />
             </SoftBox>
             <SoftBox display="flex" alignItems="center">
               <Checkbox checked={agreement} onChange={handleSetAgremment} />

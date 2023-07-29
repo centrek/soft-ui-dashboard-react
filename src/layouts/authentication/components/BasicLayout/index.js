@@ -26,22 +26,15 @@ import SoftTypography from "components/SoftTypography";
 // Soft UI Dashboard React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
+import brandLogo from "assets/images/logos/TomCD_Logo1_Transparent.png"
 
 // Authentication layout components
 import Footer from "layouts/authentication/components/Footer";
 
-function BasicLayout({ title, description, image, children }) {
+function BasicLayout({ title, headliner, description, description2, image, children }) {
   return (
     <PageLayout>
-      <DefaultNavbar
-        action={{
-          type: "external",
-          route: "https://creative-tim.com/product/soft-ui-dashboard-react",
-          label: "free download",
-        }}
-        transparent
-        light
-      />
+      
       <SoftBox
         width="calc(100% - 2rem)"
         minHeight="50vh"
@@ -62,16 +55,30 @@ function BasicLayout({ title, description, image, children }) {
           backgroundRepeat: "no-repeat",
         }}
       >
+          <SoftBox mt={-3} mb={1} sx={{ textAlign: "center" }}>
+
+              <SoftTypography variant="body2" color="white" fontWeight="bold">
+                {headliner}
+              </SoftTypography>
+            </SoftBox>
         <Grid container spacing={3} justifyContent="center" sx={{ textAlign: "center" }}>
           <Grid item xs={10} lg={4}>
-            <SoftBox mt={6} mb={1}>
+          <SoftBox mt={1}>
+          <SoftBox my={-5} mb={-5}>
+          {brandLogo && <SoftBox component="img" src={brandLogo} alt="TomCD Logo" width="calc(50%)"
+ />}
+          </SoftBox>
               <SoftTypography variant="h1" color="white" fontWeight="bold">
                 {title}
               </SoftTypography>
             </SoftBox>
-            <SoftBox mb={2}>
+            
+            <SoftBox mb={-3}>
               <SoftTypography variant="body2" color="white" fontWeight="regular">
                 {description}
+              </SoftTypography>
+              <SoftTypography variant="body2" color="white" fontWeight="regular">
+                {description2}
               </SoftTypography>
             </SoftBox>
           </Grid>
@@ -93,12 +100,17 @@ function BasicLayout({ title, description, image, children }) {
 BasicLayout.defaultProps = {
   title: "",
   description: "",
+  description2: "",
+  headliner: "",
+
 };
 
 // Typechecking props for the BasicLayout
 BasicLayout.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  description2: PropTypes.string,
+  headliner: PropTypes.string,
   image: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
