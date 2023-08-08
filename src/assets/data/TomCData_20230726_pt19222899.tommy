@@ -22,6 +22,27 @@
 			"testDateTime": "20230729022332",
 			"TestStart": "0.26875",
 			"TestEnd": "0.29375",
+      "CDSID": "",
+      "DayNumber": "",
+      "Provider":
+      {
+        "Provider": "",
+        "Role": ""
+      },
+      "Location":
+      {
+        "Department": "",
+        "Room": ""
+      },
+      "Vitals":
+      {
+        "HR": "",
+        "MAP": "",
+        "PaCO2": "",
+        "ICP": "",
+        "Hct": "",
+        "Temp": ""
+      },
 			"ClinicalObservations": "This patient presents with a subarachnoid hematoma on the left parietal lobe and has been unable to speak to the care team since arrival in the ED.",
 			"Vessels": {
 				"Right": {
