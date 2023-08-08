@@ -36,6 +36,9 @@ import typography from "assets/theme/base/typography";
 
 // Dashboard layout components
 import BuildByDevelopers from "layouts/dashboard/components/BuildByDevelopers";
+import PatientDemographics from "layouts/dashboard/components/PatientDemographics";
+import LindegaardRatioDefined from "layouts/dashboard/components/LindegaardRatioDefined";
+
 import WorkWithTheRockets from "layouts/dashboard/components/WorkWithTheRockets";
 import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
@@ -84,10 +87,10 @@ function Dashboard() {
         <SoftBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={7}>
-              <BuildByDevelopers />
+              <PatientDemographics />
             </Grid>
             <Grid item xs={12} lg={5}>
-              <WorkWithTheRockets />
+              <LindegaardRatioDefined />
             </Grid>
           </Grid>
         </SoftBox>
