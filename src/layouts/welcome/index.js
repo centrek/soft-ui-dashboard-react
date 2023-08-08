@@ -79,10 +79,11 @@ function Overview() {
             <SoftBox mb={3}>
               <SoftTypography variant="button" fontWeight="regular" color="text">
                 <u>Week 1 - Began 7/28/2023</u>
+                <li><s>Create Welcome Page</s></li>
                 <li><s>Change the footer</s></li>
                 <li><s>Fix Logo on SideNav</s></li>
                 <li><s>Style Sign-In Page</s></li>
-                <li>Design Basic Layout</li>
+                <li><s>Design Sign-in/up Pages</s></li>
                 <li><s>Adjust Navigation to include Welcome, View, Create, Quality</s></li>
                 <li>Build Structure for displaying patient info</li>
                 <li>Populate and lock down on Create Patient</li>

@@ -88,7 +88,7 @@ const routes = [
     key: "create-patient",
     route: "/create-patient",
     icon: <SickIcon size="12px" />,
-    component: <ViewPatient />,
+    component: <CreatePatient />,
     noCollapse: true,
   },
   {
@@ -97,7 +97,7 @@ const routes = [
     key: "quality",
     route: "/quality",
     icon: <SsidChartIcon size="12px" />,
-    component: <ViewPatient />,
+    component: <Quality />,
     noCollapse: true,
   },
   {

@@ -28,7 +28,7 @@ import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
 import MiniStatisticsCardIconLeft from "examples/Cards/StatisticsCards/MiniStatisticsCardIconLeft";
 
-import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
+import ReportsBarChartDates from "examples/Charts/BarCharts/ReportsBarChartDates";
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 
 // Soft UI Dashboard React base styles
@@ -44,9 +44,10 @@ import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
 
 // Data
-import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
+import reportsBarChartData from "./data/reportsBarChartData";
 import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
-
+import MiniStatisticsCardNoIcon from "examples/Cards/StatisticsCards/MiniStatisticsCardNoIcon";
+    
 function Dashboard() {
   const { size } = typography;
   const { chart, items } = reportsBarChartData;
@@ -57,7 +58,7 @@ function Dashboard() {
       <SoftBox py={3}>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} lg={8}>
               <MiniStatisticsCardIconLeft
                 title={{ text: "Patient Name" }}
                 count="LASTNAME, FIRSTNAME"
@@ -65,20 +66,16 @@ function Dashboard() {
                 icon={{ color: "info", component: "sick" }}
               />
             </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "today's users" }}
-                count="2,300"
-                percentage={{ color: "success", text: "+3%" }}
-                icon={{ color: "info", component: "public" }}
+            <Grid item xs={12} sm={6} lg={2}>
+              <MiniStatisticsCardNoIcon
+                title={{ text: "Date of SAH" }}
+                count="07/26/2023"
               />
             </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "new clients" }}
-                count="+3,462"
-                percentage={{ color: "error", text: "-2%" }}
-                icon={{ color: "info", component: "emoji_events" }}
+            <Grid item xs={12} sm={6} lg={2}>
+              <MiniStatisticsCardNoIcon
+                title={{ text: "Date of Sx" }}
+                count="07/29/2023"
               />
             </Grid>
           
@@ -86,57 +83,57 @@ function Dashboard() {
         </SoftBox>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={7}>
+            <Grid item xs={12} lg={8}>
               <PatientDemographics />
             </Grid>
-            <Grid item xs={12} lg={5}>
+            <Grid item xs={12} lg={4}>
               <LindegaardRatioDefined />
             </Grid>
           </Grid>
         </SoftBox>
-        <SoftBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} lg={5}>
-              <ReportsBarChart
-                title="active users"
+      <SoftBox mb={3}>
+      <Grid container spacing={3}>
+        <Grid item xs={12} lg={5}>
+          <ReportsBarChartDates
+            title="Vessels Insonated"
                 description={
                   <>
-                    (<strong>+23%</strong>) than last week
-                  </>
+                  </>//              (<strong>+23%</strong>) than last week
+
                 }
-                chart={chart}
-                items={items}
+            chart={chart}
               />
-            </Grid>
-            <Grid item xs={12} lg={7}>
-              <GradientLineChart
-                title="Sales Overview"
+              
+        </Grid>
+        <Grid item xs={12} lg={7}>
+          <GradientLineChart
+            title="Sales Overview"
                 description={
                   <SoftBox display="flex" alignItems="center">
-                    <SoftBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
-                      <Icon className="font-bold">arrow_upward</Icon>
-                    </SoftBox>
-                    <SoftTypography variant="button" color="text" fontWeight="medium">
-                      4% more{" "}
-                      <SoftTypography variant="button" color="text" fontWeight="regular">
-                        in 2021
-                      </SoftTypography>
-                    </SoftTypography>
+              <SoftBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
+                <Icon className="font-bold">arrow_upward</Icon>
+              </SoftBox>
+              <SoftTypography variant="button" color="text" fontWeight="medium">
+                4% more{" "}
+                <SoftTypography variant="button" color="text" fontWeight="regular">
+                  in 2021
+                </SoftTypography>
+              </SoftTypography>
                   </SoftBox>
                 }
-                height="20.25rem"
+            height="20.25rem"
                 chart={gradientLineChartData}
               />
-            </Grid>
-          </Grid>
+        </Grid>
+      </Grid>
         </SoftBox>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6} lg={8}>
-            <Projects />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <OrderOverview />
-          </Grid>
+        <Grid item xs={12} md={6} lg={8}>
+          <Projects />
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <OrderOverview />
+        </Grid>
         </Grid>
       </SoftBox>
       <Footer />
