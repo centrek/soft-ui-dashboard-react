@@ -30,10 +30,10 @@ import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
-import BarReportsChartItem from "examples/Charts/BarCharts/ReportsBarChart/ReportsBarChartItem";
+import BarReportsChartItem from "examples/Charts/BarCharts/ReportsBarChartDates/ReportsBarChartItem";
 
 // ReportsBarChart configurations
-import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
+import configs from "examples/Charts/BarCharts/ReportsBarChartDates/configs";
 
 function ReportsBarChart({ color, title, description, chart, items }) {
   const { data, options } = configs(chart.labels || [], chart.datasets || {});
@@ -51,7 +51,21 @@ function ReportsBarChart({ color, title, description, chart, items }) {
 
   return (
     <Card sx={{ height: "100%" }}>
-      <SoftBox padding="1rem">
+    <SoftBox p={2}>
+      {title || description ? (
+        <SoftBox px={description ? 1 : 0} pt={description ? 1 : 0}>
+          {title && (
+            <SoftBox mb={1}>
+              <SoftTypography variant="h6">{title}</SoftTypography>
+            </SoftBox>
+          )}
+          <SoftBox mb={2}>
+            <SoftTypography component="div" variant="button" fontWeight="regular" color="text">
+              {description}
+            </SoftTypography>
+          </SoftBox>
+        </SoftBox>
+      ) : null}
         {useMemo(
           () => (
             <SoftBox
@@ -61,28 +75,14 @@ function ReportsBarChart({ color, title, description, chart, items }) {
               py={2}
               pr={0.5}
               mb={3}
-              height="12.5rem"
+              height="18.5rem"
             >
               <Bar data={data} options={options} />
             </SoftBox>
           ),
           [chart, color]
         )}
-        <SoftBox px={1}>
-          <SoftBox mb={2}>
-            <SoftTypography variant="h6" fontWeight="medium" textTransform="capitalize">
-              {title}
-            </SoftTypography>
-            <SoftTypography component="div" variant="button" color="text" fontWeight="regular">
-              {description}
-            </SoftTypography>
-          </SoftBox>
-          <SoftBox py={1} px={0.5}>
-            <Grid container spacing={2}>
-              {renderItems}
-            </Grid>
-          </SoftBox>
-        </SoftBox>
+        
       </SoftBox>
     </Card>
   );

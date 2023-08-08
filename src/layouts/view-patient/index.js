@@ -23,6 +23,8 @@ import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import PageLayout from "examples/LayoutContainers/PageLayout";
+
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
@@ -42,11 +44,16 @@ import LindegaardRatioDefined from "layouts/dashboard/components/LindegaardRatio
 import WorkWithTheRockets from "layouts/dashboard/components/WorkWithTheRockets";
 import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
+import PatientChartTimeline from "layouts/dashboard/components/PatientChartTimeline";
+
 
 // Data
 import reportsBarChartData from "./data/reportsBarChartData";
 import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
 import MiniStatisticsCardNoIcon from "examples/Cards/StatisticsCards/MiniStatisticsCardNoIcon";
+import VerticalBarChart from "examples/Charts/BarCharts/VerticalBarChart";
+import HorizontalBarChart from "examples/Charts/BarCharts/HorizontalBarChart";
+
     
 function Dashboard() {
   const { size } = typography;
@@ -74,7 +81,7 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} sm={6} lg={2}>
               <MiniStatisticsCardNoIcon
-                title={{ text: "Date of Sx" }}
+                title={{ text: "Date of Surgery" }}
                 count="07/29/2023"
               />
             </Grid>
@@ -96,14 +103,22 @@ function Dashboard() {
         <Grid item xs={12} lg={5}>
           <ReportsBarChartDates
             title="Vessels Insonated"
-                description={
-                  <>
-                  </>//              (<strong>+23%</strong>) than last week
-
-                }
+            description={
+              <SoftBox display="flex" alignItems="center">
+          <SoftBox fontSize={size.lg} color="error" mb={0.3} mr={0.5} lineHeight={0}>
+            <Icon className="font-bold">arrow_downward</Icon>
+          </SoftBox>
+          <SoftTypography variant="button" color="text" fontWeight="medium">
+            1 less{" "}
+            <SoftTypography variant="button" color="text" fontWeight="regular">
+              than yesterday
+            </SoftTypography>
+          </SoftTypography>
+              </SoftBox>
+            }
             chart={chart}
+            color={"secondary"}
               />
-              
         </Grid>
         <Grid item xs={12} lg={7}>
           <GradientLineChart
@@ -132,7 +147,7 @@ function Dashboard() {
           <Projects />
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
-          <OrderOverview />
+          <PatientChartTimeline />
         </Grid>
         </Grid>
       </SoftBox>

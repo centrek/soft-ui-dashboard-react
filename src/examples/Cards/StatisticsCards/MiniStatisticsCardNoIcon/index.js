@@ -39,7 +39,6 @@ function MiniStatisticsCardNoIcon({ bgColor, title, count, percentage, direction
                   opacity={bgColor === "white" ? 1 : 0.7}
                   textTransform="capitalize"
                   fontWeight={title.fontWeight}
-                  
                 >
                   {title.text}            
 

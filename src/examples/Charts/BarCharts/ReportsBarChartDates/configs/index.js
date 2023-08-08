@@ -68,12 +68,13 @@ function configs(labels, datasets) {
         x: {
           grid: {
             drawBorder: false,
-            display: false,
-            drawOnChartArea: false,
-            drawTicks: false,
+            display: true,
+            drawOnChartArea: true,
+            drawTicks: true,
           },
           ticks: {
-            display: false,
+            display: true,
+            color: "white"
           },
         },
       },
