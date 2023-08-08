@@ -67,6 +67,7 @@ function MiniStatisticsCardIconLeft({ bgColor, title, count, percentage, icon, d
                   variant="h4"
                   fontWeight="bold"
                   color={bgColor === "white" ? "dark" : "white"}
+                  textTransform="uppercase"
                 >
                   {count}{" "}
 

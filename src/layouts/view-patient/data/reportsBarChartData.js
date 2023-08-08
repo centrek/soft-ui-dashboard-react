@@ -15,8 +15,8 @@ Coded by www.creative-tim.com
 
 const reportsBarChartData = {
   chart: {
-    labels: ["7/29/23", "7/30/23", "7/31/23", "8/1/23", "8/2/23"],
-    datasets: { label: "Vessels", data: [6, 5, 6, 8, 7] },
+    labels: ["07/29", "07/30", "07/31", "08/01", "08/02/", "08/03", "08/04"],
+    datasets: { label: "Vessels", data: [13, 13, 13, 13, 14, 13, 13] },
   },
   
 };

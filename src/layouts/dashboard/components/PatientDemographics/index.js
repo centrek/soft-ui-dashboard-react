@@ -36,23 +36,23 @@ function PatientDemographics() {
               <SoftBox pt={0} mb={0.5}>
 
               </SoftBox>
-              <SoftTypography py={0} my={0} variant="h5" fontWeight="bold" gutterBottom>
-                Hospital:  Hospital Name
+              <SoftTypography py={0} my={0} variant="h4" fontWeight="bold" gutterBottom>
+                Hospital:  Mercy Neurological Hospital
               </SoftTypography>
-              <SoftTypography variant="h5" fontWeight="normal" gutterBottom>
-                Physician: Physician Name
+              <SoftTypography variant="h4" fontWeight="normal" gutterBottom>
+                Physician: Hadloupnosee, Herman
               </SoftTypography>
               <SoftBox mb={6}>
                 <SoftTypography variant="body2" color="text">
-                  DOB:
+                  DOB:  <b>03/05/1945</b>
                   <br />
-                  Race:
+                  Race:  <b>Caucasian</b>
                   <br />
-                  MRN:
+                  MRN:  <b>2382282</b>
                   <br />
-                  FIN:
+                  FIN:  <b>1904383759</b>
                   <br />
-                  Gender:
+                  Gender: <b>Female</b>
                   <br />
                 </SoftTypography>
               </SoftBox>
@@ -80,7 +80,7 @@ function PatientDemographics() {
                   },
                 }}
               >
-                Read More
+                Edit Patient
                 <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
               </SoftTypography>
             </SoftBox>

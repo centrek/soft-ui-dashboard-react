@@ -30,8 +30,11 @@ import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
 import MiniStatisticsCardIconLeft from "examples/Cards/StatisticsCards/MiniStatisticsCardIconLeft";
 
+import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 import ReportsBarChartDates from "examples/Charts/BarCharts/ReportsBarChartDates";
+import GradientLineChartPatient from "examples/Charts/LineCharts/GradientLineChartPatient";
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
+
 
 // Soft UI Dashboard React base styles
 import typography from "assets/theme/base/typography";
@@ -42,14 +45,14 @@ import PatientDemographics from "layouts/dashboard/components/PatientDemographic
 import LindegaardRatioDefined from "layouts/dashboard/components/LindegaardRatioDefined";
 
 import WorkWithTheRockets from "layouts/dashboard/components/WorkWithTheRockets";
-import Projects from "layouts/dashboard/components/Projects";
+import Tests from "layouts/dashboard/components/Tests";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
 import PatientChartTimeline from "layouts/dashboard/components/PatientChartTimeline";
 
 
 // Data
 import reportsBarChartData from "./data/reportsBarChartData";
-import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
+import gradientLineChartData from "./data/gradientLineChartData";
 import MiniStatisticsCardNoIcon from "examples/Cards/StatisticsCards/MiniStatisticsCardNoIcon";
 import VerticalBarChart from "examples/Charts/BarCharts/VerticalBarChart";
 import HorizontalBarChart from "examples/Charts/BarCharts/HorizontalBarChart";
@@ -68,7 +71,7 @@ function Dashboard() {
             <Grid item xs={12} lg={8}>
               <MiniStatisticsCardIconLeft
                 title={{ text: "Patient Name" }}
-                count="LASTNAME, FIRSTNAME"
+                count="Phillipson, Suzanne"
                 percentage={{ color: "info", text: "03/05/1945" }}
                 icon={{ color: "info", component: "sick" }}
               />
@@ -108,10 +111,10 @@ function Dashboard() {
           <SoftBox fontSize={size.lg} color="error" mb={0.3} mr={0.5} lineHeight={0}>
             <Icon className="font-bold">arrow_downward</Icon>
           </SoftBox>
-          <SoftTypography variant="button" color="text" fontWeight="medium">
-            1 less{" "}
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            On latest Test - 1 less{" "}
             <SoftTypography variant="button" color="text" fontWeight="regular">
-              than yesterday
+              than max (14 insonated on 08/01)
             </SoftTypography>
           </SoftTypography>
               </SoftBox>
@@ -121,22 +124,22 @@ function Dashboard() {
               />
         </Grid>
         <Grid item xs={12} lg={7}>
-          <GradientLineChart
-            title="Sales Overview"
+          <GradientLineChartPatient
+            title="Vessel Velocities"
                 description={
                   <SoftBox display="flex" alignItems="center">
               <SoftBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
                 <Icon className="font-bold">arrow_upward</Icon>
               </SoftBox>
               <SoftTypography variant="button" color="text" fontWeight="medium">
-                4% more{" "}
+                32% increase{" "}
                 <SoftTypography variant="button" color="text" fontWeight="regular">
-                  in 2021
+                  since Day 1 on M1
                 </SoftTypography>
               </SoftTypography>
                   </SoftBox>
                 }
-            height="20.25rem"
+            height="100%"
                 chart={gradientLineChartData}
               />
         </Grid>
@@ -144,7 +147,7 @@ function Dashboard() {
         </SoftBox>
         <Grid container spacing={3}>
         <Grid item xs={12} md={6} lg={8}>
-          <Projects />
+          <Tests />
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <PatientChartTimeline />

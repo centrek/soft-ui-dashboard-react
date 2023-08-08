@@ -14,18 +14,45 @@ Coded by www.creative-tim.com
 */
 
 const gradientLineChartData = {
-  labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  labels: ["07/29", "07/30", "07/31", "08/01", "08/02", "08/03", "08/04"],
   datasets: [
     {
-      label: "Mobile apps",
+      label: "M1",
       color: "info",
-      data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+      data: [28, 37, 50, 36, 74, 65, 37],
     },
     {
-      label: "Websites",
+      label: "M2",
       color: "dark",
-      data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+      data: [25, 34, 39, 35, 45, 61, 39],
     },
+    {
+      label: "A1",
+      color: "secondary",
+      data: [30, 46, 56, 50, 70, 47, 42],
+    },
+    {
+      label: "C1",
+      color: "primary",
+      data: [29, 40, 49, 45, 70, 58, 39],
+    },
+    {
+      label: "ICA EXT",
+      color: "success",
+      data: [26, 19, 20, 25, 24, 47, 36],
+    },
+    {
+      label: "VA",
+      color: "warning",
+      data: [26, 22, 30, 26, 36, 30, 31],
+    },
+    {
+      label: "Basilar",
+      color: "error",
+      data: [31, 22, 25, 26, 37, 50, 32],
+    },
+
+    
   ],
 };
 

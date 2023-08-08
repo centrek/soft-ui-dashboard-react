@@ -83,6 +83,7 @@ const colors = {
     main: "#344767",
     focus: "#344767",
   },
+  
 
   grey: {
     100: "#f8f9fa",
@@ -135,6 +136,14 @@ const colors = {
     dark: {
       main: "#141727",
       state: "#3a416f",
+    },
+    patientFemale: {
+      main: "#FFC0CB",
+      state: "#FFC0CB",
+    },
+    patientMale: {
+      main: "#c0d7ff",
+      state: "#c0d7ff",
     },
   },
 
@@ -214,6 +223,18 @@ const colors = {
     },
 
     info: {
+      main: "#2152ff",
+      state: "#02c6f3",
+      border: "#b9ecf8",
+    },
+
+    patientFemale: {
+      main: "#ff91bf",
+      state: "#F8C8DC",
+      border: "#F8C8DC",
+    },
+
+    patientMale: {
       main: "#2152ff",
       state: "#02c6f3",
       border: "#b9ecf8",

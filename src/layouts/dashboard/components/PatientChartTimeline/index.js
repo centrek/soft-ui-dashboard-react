@@ -25,7 +25,7 @@ import SoftTypography from "components/SoftTypography";
 // Soft UI Dashboard React examples
 import TimelineItem from "examples/Timeline/TimelineItem";
 
-function OrdersOverview() {
+function TimelineOverview() {
   return (
     <Card className="h-100">
       <SoftBox pt={3} px={3}>
@@ -39,14 +39,26 @@ function OrdersOverview() {
           color="success"
           icon="hail"
           title="Patient Discharged to Home"
-          dateTime="03 AUG 7:20 PM"
+          dateTime="04 AUG 7:20 PM"
         />
         <TimelineItem
           color="info"
           icon="poweroff"
           title="TCD Orders Discontinued"
-          dateTime="03 AUG 7:20 PM"
-        />
+          dateTime="04 AUG 7:20 PM"
+        />        
+      <TimelineItem
+        color="secondary"
+        icon="spatialtracking"
+        title="TCD Performed by Mark McGee"
+        dateTime="04 AUG 7:23 AM"
+      />
+      <TimelineItem
+        color="secondary"
+        icon="spatialtracking"
+        title="TCD Performed by Mark McGee"
+        dateTime="03 AUG 10:16 AM"
+      />
         <TimelineItem
           color="secondary"
           icon="spatialtracking"
@@ -75,7 +87,7 @@ function OrdersOverview() {
           color="error"
           icon="sick"
           title="Patient Record Created"
-          dateTime="29 JUL 8:54 AM"
+          dateTime="29 JUL 4:12 PM"
         />
         <TimelineItem color="dark" icon="addchart" title="Initialization #9583120" dateTime="29 JUL 2023" />
       </SoftBox>
@@ -83,4 +95,4 @@ function OrdersOverview() {
   );
 }
 
-export default OrdersOverview;
+export default TimelineOverview;
