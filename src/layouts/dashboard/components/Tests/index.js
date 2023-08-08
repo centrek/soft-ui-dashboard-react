@@ -67,38 +67,11 @@ function Projects() {
       <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <SoftBox>
           <SoftTypography variant="h6" gutterBottom>
-            Tests Performed
+            Drop Here
           </SoftTypography>
-          <SoftBox display="flex" alignItems="center" lineHeight={0}>
-            <Icon
-              sx={{
-                fontWeight: "bold",
-                color: ({ palette: { info } }) => info.main,
-                mt: -0.5,
-              }}
-            >
-              done
-            </Icon>
-            <SoftTypography variant="button" fontWeight="regular" color="text">
-              &nbsp;<strong>7</strong> TCDs in this patient&apos;s record
-            </SoftTypography>
-          </SoftBox>
+          
         </SoftBox>
-        <SoftBox color="text" px={2}>
-                 
-      <SuiPagination>
-  <SuiPagination item>
-    <Icon>keyboard_arrow_left</Icon>
-  </SuiPagination>
-  <SuiPagination item active>1</SuiPagination>
-  <SuiPagination item>2</SuiPagination>
-  <SuiPagination item>3</SuiPagination>
-  <SuiPagination item>
-    <Icon>keyboard_arrow_right</Icon>
-  </SuiPagination>
-</SuiPagination>
-        </SoftBox>
-        {renderMenu}
+       
       </SoftBox>
       <SoftBox
         sx={{

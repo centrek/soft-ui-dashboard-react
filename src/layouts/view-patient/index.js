@@ -16,6 +16,7 @@ Coded by www.creative-tim.com
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
+import React, { useState } from "react";
 
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
@@ -56,15 +57,28 @@ import gradientLineChartData from "./data/gradientLineChartData";
 import MiniStatisticsCardNoIcon from "examples/Cards/StatisticsCards/MiniStatisticsCardNoIcon";
 import VerticalBarChart from "examples/Charts/BarCharts/VerticalBarChart";
 import HorizontalBarChart from "examples/Charts/BarCharts/HorizontalBarChart";
+import SuiDropzone from "components/SoftDropzone";
+import DataUploadModal from "layouts/dashboard/components/ViewDropzone"; // Import the component
+
 
     
 function Dashboard() {
   const { size } = typography;
   const { chart, items } = reportsBarChartData;
+  const [modalOpen, setModalOpen] = useState(true);
+  const [patientFile, setPatientFile] = useState(null);
+
+  const handleFileUpload = (file) => {
+    // Process the uploaded file here
+    setPatientFile(file);
+  };
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
+      <SoftBox py={3}>
+      <DataUploadModal open={modalOpen} onClose={() => setModalOpen(false)} onFileUpload={handleFileUpload} />
+        </SoftBox>
       <SoftBox py={3}>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
