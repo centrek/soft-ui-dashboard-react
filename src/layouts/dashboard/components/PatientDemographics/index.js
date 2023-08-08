@@ -37,7 +37,7 @@ function PatientDemographics() {
 
               </SoftBox>
               <SoftTypography py={0} my={0} variant="h4" fontWeight="bold" gutterBottom>
-                Hospital:  Mercy Neurological Hospital
+                Hospital:  Mercy d Hospital
               </SoftTypography>
               <SoftTypography variant="h4" fontWeight="normal" gutterBottom>
                 Physician: Hadloupnosee, Herman
@@ -104,7 +104,7 @@ function PatientDemographics() {
                 height="100%"
 
               />
-            <SoftTypography justifyContent="center" pt={3} variant="h3" color="white" fontWeight="bold">
+            <SoftTypography justifyContent="center" pt={3} variant="h2" color="white" fontWeight="bold">
               Lindegaard Ratio
             </SoftTypography>
               <Grid container justifyContent="center">
@@ -115,11 +115,11 @@ function PatientDemographics() {
                  Left
                 </SoftTypography>
               </Grid>
-              <Grid container>
-                <SoftTypography px={2} mb={8} variant="h1" fontSize="60px" color="white" fontWeight="bold">
+              <Grid container justifyContent="center">
+                <SoftTypography px={3} mb={8} variant="lindegaard" fontSize="60px" color="white" fontWeight="bold">
                  0.7
                 </SoftTypography>
-                <SoftTypography px={2} mb={8} variant="h1" fontSize="60px" color="white" fontWeight="bold">
+                <SoftTypography px={3} mb={8} variant="lindegaard" fontSize="60px" color="white" fontWeight="bold">
                  0.5
                 </SoftTypography>
               </Grid>

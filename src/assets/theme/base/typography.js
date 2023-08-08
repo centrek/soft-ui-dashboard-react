@@ -85,9 +85,16 @@ const typography = {
     ...baseHeadingProperties,
   },
 
+  lindegaard: {
+    fontSize: pxToRem(24),
+    lineHeight: 2.5,
+    ...baseHeadingProperties,
+  },
+
   h5: {
     fontSize: pxToRem(20),
     lineHeight: 1.375,
+
     ...baseHeadingProperties,
   },
 

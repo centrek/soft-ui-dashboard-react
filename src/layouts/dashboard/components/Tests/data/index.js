@@ -7,64 +7,30 @@ import SoftTypography from "components/SoftTypography";
 import SoftAvatar from "components/SoftAvatar";
 import SoftProgress from "components/SoftProgress";
 
-// Images
-import logoXD from "assets/images/small-logos/logo-xd.svg";
-import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
-import logoSlack from "assets/images/small-logos/logo-slack.svg";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
-import logoJira from "assets/images/small-logos/logo-jira.svg";
-import logoInvesion from "assets/images/small-logos/logo-invision.svg";
-import team1 from "assets/images/team-1.jpg";
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
 
 export default function data() {
-  const avatars = (members) =>
-    members.map(([image, name]) => (
-      <Tooltip key={name} title={name} placeholder="bottom">
-        <SoftAvatar
-          src={image}
-          alt="name"
-          size="xs"
-          sx={{
-            border: ({ borders: { borderWidth }, palette: { white } }) =>
-              `${borderWidth[2]} solid ${white.main}`,
-            cursor: "pointer",
-            position: "relative",
 
-            "&:not(:first-of-type)": {
-              ml: -1.25,
-            },
-
-            "&:hover, &:focus": {
-              zIndex: "10",
-            },
-          }}
-        />
-      </Tooltip>
-    ));
 
   return {
     
     columns: [
-      { name: "RightVessel", align: "center" },
-      { name: "Emboli", align: "center" },
-      { name: "Mean", align: "center" },
-      { name: "PI", align: "center" },
-      { name: "Depth", align: "center" },
-      { name: "HPV", align: "center" },
-      { name: "Left Vessel", align: "center" },
-      { name: "Emboli", align: "center" },
-      { name: "Mean", align: "center" },
-      { name: "PI", align: "center" },
-      { name: "Depth", align: "center" },
-      { name: "HPV", align: "center" },
+      { id: "rightvessel", name: "Vessel", align: "center"},
+      { id: "rightemboli", name: "Emboli", align: "center" },
+      { id: "rightmean",  name: "Mean", align: "center" },
+      { id: "rightpi",  name: "PI", align: "center" },
+      { id: "rightdepth",  name: "Depth", align: "center" },
+      { id: "righthpv",  name: "HPV", align: "center" },
+      { id: "leftvessel", name: "Vessel", align: "center"},
+      { id: "leftemboli", name: "Emboli", align: "center" },
+      { id: "leftmean",  name: "Mean", align: "center" },
+      { id: "leftpi",  name: "PI", align: "center" },
+      { id: "leftdepth",  name: "Depth", align: "center" },
+      { id: "lefthpv",  name: "HPV", align: "center" },
     ],
 
     rows: [
       {
-        RightVessel: (
+        Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             M1
           </SoftTypography>
@@ -97,7 +63,7 @@ export default function data() {
       },
 
       {
-        RightVessel: (
+        Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             M2
           </SoftTypography>
@@ -130,7 +96,7 @@ export default function data() {
       },
 
       {
-        RightVessel: (
+        Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             A1
           </SoftTypography>
@@ -163,7 +129,7 @@ export default function data() {
       },
 
       {
-        RightVessel: (
+        Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             C1
           </SoftTypography>
@@ -196,7 +162,7 @@ export default function data() {
       },
 
       {
-        RightVessel: (
+        Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             ICA EXT
           </SoftTypography>
@@ -229,7 +195,7 @@ export default function data() {
       },
 
       {
-        RightVessel: (
+        Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             VA
           </SoftTypography>
