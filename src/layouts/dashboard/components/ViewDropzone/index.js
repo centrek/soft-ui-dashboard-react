@@ -23,19 +23,11 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
 
-// Soft UI Dashboard Materail-UI example components
-import Table from "examples/Tables/Table";
-
-// Data
-import data from "layouts/dashboard/components/Tests/data";
-import SuiPagination from "components/SoftPagination";
 
 
 const styles = {
@@ -45,8 +37,8 @@ const styles = {
     alignItems: "center",
   },
   modalContent: {
-    width: "60%",
-    height: "60%",
+    width: "100%",
+    height: "100%",
     background: "#fff",
     borderRadius: "8px",
     overflow: "hidden",
@@ -56,7 +48,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    minHeight: "100px",
+    minHeight: "200px",
     border: "2px dashed #ccc",
   },
 };
@@ -88,9 +80,7 @@ function ViewDropzone({ open, onClose, onFileUpload }) {
     <Card>
       <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <SoftBox>
-          <SoftTypography variant="h6" gutterBottom>
-            Tests Performed
-          </SoftTypography>
+
           <SoftTypography variant="h6" gutterBottom>
             <SuiDropzone options={{ addRemoveLinks: true }} />
           </SoftTypography>
