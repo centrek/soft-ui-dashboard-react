@@ -25,7 +25,10 @@ import Icon from "@mui/material/Icon";
 import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
 
+
 function MiniStatisticsCardIconLeft({ bgColor, title, count, percentage, icon, direction }) {
+  console.log("Icon Color:", icon.color); // Check if "patientFemale" is being printed
+
   return (
     <Card>
       <SoftBox bgColor={bgColor} variant="gradient">
@@ -107,6 +110,8 @@ MiniStatisticsCardIconLeft.propTypes = {
     "warning",
     "error",
     "dark",
+    "female",
+    "male",
   ]),
   title: PropTypes.PropTypes.shape({
     fontWeight: PropTypes.oneOf(["light", "regular", "medium", "bold"]),
@@ -123,11 +128,14 @@ MiniStatisticsCardIconLeft.propTypes = {
       "error",
       "dark",
       "white",
+      "female",
+      "male",
     ]),
     text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }),
+
   icon: PropTypes.shape({
-    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+    color: PropTypes.oneOf(["primary", "secondary", "info", "info2", "success", "warning", "error", "dark", "female", "male"]),
     component: PropTypes.node.isRequired,
   }).isRequired,
   direction: PropTypes.oneOf(["right", "left"]),

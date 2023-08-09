@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 
 const reportsBarChartData = {
   chart: {
-    labels: ["07/29", "07/30", "07/31", "08/01", "08/02/", "08/03", "08/04"],
+    labels: ["07/29", "07/30", "07/31", "08/01", "08/02", "08/03", "08/04"],
     datasets: { label: "Vessels", data: [13, 13, 13, 13, 14, 13, 13] },
   },
   

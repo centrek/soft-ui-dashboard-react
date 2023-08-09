@@ -67,7 +67,7 @@ function Projects() {
       <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <SoftBox>
           <SoftTypography variant="h6" gutterBottom>
-            Drop Here
+            TCD Study Data
           </SoftTypography>
           
         </SoftBox>

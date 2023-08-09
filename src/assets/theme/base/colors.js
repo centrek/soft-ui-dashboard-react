@@ -83,6 +83,17 @@ const colors = {
     main: "#344767",
     focus: "#344767",
   },
+
+  female: {
+    main: "#ff859a", // Define the main color value
+    state: "#ff6e87", // Define the state color value (if needed)
+  },
+
+  male: {
+    main: "#5493ff",
+    state: "#c0d7ff",
+  },
+  
   
 
   grey: {
@@ -137,14 +148,16 @@ const colors = {
       main: "#141727",
       state: "#3a416f",
     },
-    patientFemale: {
-      main: "#FFC0CB",
-      state: "#FFC0CB",
+
+    female: {
+      main: "#ff9cad",
+      state: "#ffc0cb",
     },
-    patientMale: {
-      main: "#c0d7ff",
-      state: "#c0d7ff",
-    },
+
+    male: {
+      main: "#82baff",
+      state: "#21d4fd",
+    }
   },
 
   socialMediaColors: {
@@ -228,13 +241,13 @@ const colors = {
       border: "#b9ecf8",
     },
 
-    patientFemale: {
+    female: {
       main: "#ff91bf",
-      state: "#F8C8DC",
-      border: "#F8C8DC",
+      state: "#f8c8dc",
+      border: "#f8c8dc",
     },
 
-    patientMale: {
+    male: {
       main: "#2152ff",
       state: "#02c6f3",
       border: "#b9ecf8",
@@ -311,6 +324,18 @@ const colors = {
       background: "#8097bf",
       text: "#1e2e4a",
     },
+
+    female: {
+      background: "#ff91bf",
+      text: "#ffc0cb",
+    },
+
+    male: {
+      background: "#2152ff",
+      text: "#c0d7ff",
+    },
+
+
   },
 
   inputColors: {

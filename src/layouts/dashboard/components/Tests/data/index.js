@@ -14,12 +14,12 @@ export default function data() {
   return {
     
     columns: [
-      { id: "rightvessel", name: "Vessel", align: "center"},
-      { id: "rightemboli", name: "Emboli", align: "center" },
-      { id: "rightmean",  name: "Mean", align: "center" },
-      { id: "rightpi",  name: "PI", align: "center" },
-      { id: "rightdepth",  name: "Depth", align: "center" },
-      { id: "righthpv",  name: "HPV", align: "center" },
+      { id: "rightvessel", name: "RVessel", align: "center"},
+      { id: "rightemboli", name: "REmboli", align: "center" },
+      { id: "rightmean",  name: "RMean", align: "center" },
+      { id: "rightpi",  name: "RPI", align: "center" },
+      { id: "rightdepth",  name: "RDepth", align: "center" },
+      { id: "righthpv",  name: "RHPV", align: "center" },
       { id: "leftvessel", name: "Vessel", align: "center"},
       { id: "leftemboli", name: "Emboli", align: "center" },
       { id: "leftmean",  name: "Mean", align: "center" },
@@ -30,6 +30,36 @@ export default function data() {
 
     rows: [
       {
+        RVessel: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            M1
+          </SoftTypography>
+        ),
+        REmboli: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            -
+          </SoftTypography>
+        ),
+        RMean: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            31
+          </SoftTypography>
+        ),
+        RPI: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            1.7
+          </SoftTypography>
+        ),
+        RDepth: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            51
+          </SoftTypography>
+        ),
+        RHPV: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            90
+          </SoftTypography>
+        ),
         Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             M1
@@ -61,8 +91,37 @@ export default function data() {
           </SoftTypography>
         ),
       },
-
       {
+        RVessel: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            M2
+          </SoftTypography>
+        ),
+        REmboli: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            -
+          </SoftTypography>
+        ),
+        RMean: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            34
+          </SoftTypography>
+        ),
+        RPI: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            0.7
+          </SoftTypography>
+        ),
+        RDepth: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            42
+          </SoftTypography>
+        ),
+        RHPV: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            50
+          </SoftTypography>
+        ),
         Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             M2
@@ -94,8 +153,37 @@ export default function data() {
           </SoftTypography>
         ),
       },
-
       {
+        RVessel: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            A1
+          </SoftTypography>
+        ),
+        REmboli: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            -
+          </SoftTypography>
+        ),
+        RMean: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            46
+          </SoftTypography>
+        ),
+        RPI: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            1.3
+          </SoftTypography>
+        ),
+        RDepth: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            68
+          </SoftTypography>
+        ),
+        RHPV: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            85
+          </SoftTypography>
+        ),
         Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             A1
@@ -127,8 +215,37 @@ export default function data() {
           </SoftTypography>
         ),
       },
-
       {
+        RVessel: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            C1
+          </SoftTypography>
+        ),
+        REmboli: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            -
+          </SoftTypography>
+        ),
+        RMean: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            40
+          </SoftTypography>
+        ),
+        RPI: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            1.4
+          </SoftTypography>
+        ),
+        RDepth: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            62
+          </SoftTypography>
+        ),
+        RHPV: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            85
+          </SoftTypography>
+        ),
         Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             C1
@@ -162,6 +279,36 @@ export default function data() {
       },
 
       {
+        RVessel: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            ICA EXT
+          </SoftTypography>
+        ),
+        REmboli: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            -
+          </SoftTypography>
+        ),
+        RMean: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            19
+          </SoftTypography>
+        ),
+        RPI: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            0.9
+          </SoftTypography>
+        ),
+        RDepth: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            40
+          </SoftTypography>
+        ),
+        RHPV: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            31
+          </SoftTypography>
+        ),
         Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             ICA EXT
@@ -195,6 +342,36 @@ export default function data() {
       },
 
       {
+        RVessel: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            VA
+          </SoftTypography>
+        ),
+        REmboli: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            -
+          </SoftTypography>
+        ),
+        RMean: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            22
+          </SoftTypography>
+        ),
+        RPI: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            0.9
+          </SoftTypography>
+        ),
+        RDepth: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            68
+          </SoftTypography>
+        ),
+        RHPV: (
+          <SoftTypography variant="button" color="text" fontWeight="bold">
+            33
+          </SoftTypography>
+        ),
         Vessel: (
           <SoftTypography variant="button" color="text" fontWeight="bold">
             VA
@@ -225,8 +402,8 @@ export default function data() {
             33
           </SoftTypography>
         ),
+     
       },
-      
     ],
   };
 }

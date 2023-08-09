@@ -39,7 +39,7 @@ function PatientDemographics() {
               <SoftTypography py={0} my={0} variant="h4" fontWeight="bold" gutterBottom>
                 Hospital:  Mercy d Hospital
               </SoftTypography>
-              <SoftTypography variant="h4" fontWeight="normal" gutterBottom>
+              <SoftTypography variant="h4" fontWeight="regular" gutterBottom>
                 Physician: Hadloupnosee, Herman
               </SoftTypography>
               <SoftBox mb={6}>
