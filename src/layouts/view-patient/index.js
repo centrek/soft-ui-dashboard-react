@@ -84,8 +84,8 @@ function Dashboard() {
               <MiniStatisticsCardIconLeft
                 title={{ text: "Patient Name" }}
                 count="Phillipson, Suzanne"
-                percentage={{ color: "male", text: "03/05/1945" }}
-                icon={{ color: "male", component: "sick" }}
+                percentage={{ color: "female", text: "03/05/1945" }}
+                icon={{ color: "female", component: "sick" }}
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={2}>

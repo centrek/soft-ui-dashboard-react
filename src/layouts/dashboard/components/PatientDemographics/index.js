@@ -18,6 +18,8 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
+import PropTypes from "prop-types";
+
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
@@ -25,8 +27,17 @@ import SoftTypography from "components/SoftTypography";
 // Images
 import wavesWhite from "assets/images/shapes/waves-white.svg";
 import rocketWhite from "assets/images/illustrations/rocket-white.png";
+import { useSoftUIController, setDemographics } from "context";
 
-function PatientDemographics() {
+import { useTheme } from "@mui/material/styles"; // Import the useTheme hook
+
+
+function PatientDemographics({ color }) {
+  const theme = useTheme(); // Access the current theme
+  const [controller, dispatch] = useSoftUIController();
+  const { demographics, transparentSidenav } = controller;
+  console.log(theme.palette[color]); // Log the palette color object
+
   return (
     <Card>
       <SoftBox p={2}>
@@ -90,7 +101,7 @@ function PatientDemographics() {
               height="100%"
               display="grid"
               justifyContent="center"
-              bgColor="info"
+              bgColor={color} // Use the theme color
               borderRadius="lg"
               variant="gradient"
             >
@@ -132,4 +143,17 @@ function PatientDemographics() {
   );
 }
 
+// Setting default values for the props of Sidenav
+PatientDemographics.defaultProps = {
+  color: "info",
+  brand: "",
+};
+
+// Typechecking props for the Sidenav
+PatientDemographics.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  brand: PropTypes.string,
+  brandName: PropTypes.string.isRequired,
+  routes: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 export default PatientDemographics;
