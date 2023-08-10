@@ -151,9 +151,9 @@ PatientDemographics.defaultProps = {
 
 // Typechecking props for the Sidenav
 PatientDemographics.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark", "female", "male"]),
   brand: PropTypes.string,
-  brandName: PropTypes.string.isRequired,
-  routes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  brandName: PropTypes.string,
+  routes: PropTypes.arrayOf(PropTypes.object),
 };
 export default PatientDemographics;

@@ -60,6 +60,8 @@ SoftTypography.propTypes = {
     "dark",
     "text",
     "white",
+    "female",
+    "male"
   ]),
   fontWeight: PropTypes.oneOf([false, "light", "regular", "medium", "bold"]),
   textTransform: PropTypes.oneOf(["none", "capitalize", "uppercase", "lowercase"]),

@@ -63,6 +63,8 @@ export default styled(Box)(({ theme, ownerState }) => {
     "light",
     "dark",
     "text",
+    "female",
+    "male",
     "grey-100",
     "grey-200",
     "grey-300",
@@ -71,9 +73,8 @@ export default styled(Box)(({ theme, ownerState }) => {
     "grey-600",
     "grey-700",
     "grey-800",
-    "grey-900",
-    "female",
-    "male"
+    "grey-900"
+  
   ];
 
   const validBorderRadius = ["xs", "sm", "md", "lg", "xl", "xxl", "section"];

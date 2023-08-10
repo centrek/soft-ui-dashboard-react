@@ -143,6 +143,8 @@ MiniStatisticsCard.propTypes = {
       "error",
       "dark",
       "white",
+      "female",
+      "male"
     ]),
     text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }),
