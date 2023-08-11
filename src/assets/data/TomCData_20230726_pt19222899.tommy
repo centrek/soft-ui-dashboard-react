@@ -3,16 +3,16 @@
 	"type": "donut",
 	"name": "Cake",
 	"patient": {
-		"Hospital:": "Omaha-Seattle Brain and and Heart Institute",
-		"Physician:": "Callahan, Robert",
-		"DateOfSAH:": "20230726",
-		"DateOfOR:": 45130,
+		"Hospital": "Omaha-Seattle Brain and Heart Institute",
+		"Physician": "Callahan, Robert",
+		"DateOfSAH": "07/26/2023",
+		"DateOfOR": "07/29/2023",
 		"Name": {
 			"First": "Suzanne",
 			"Middle": "J",
 			"Last": "Phillipson"
 		},
-		"DOB": "20230305",
+		"DOB": "03/05/1945",
 		"Race": "Caucasian",
 		"Gender": "Female",
 		"MRN": 539292,

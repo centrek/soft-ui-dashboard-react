@@ -13,9 +13,9 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import React, { useState, useEffect } from "react";
+import React, { useState, use } from "react";
 import Modal from "@mui/material/Modal";
-import SuiDropzone from "components/SoftDropzone";
+import SuiDropzone from "components/SoftDropzoneViewPatient";
 import PropTypes from "prop-types";
 
 // <SuiDropzone options={{ addRemoveLinks: true }} />

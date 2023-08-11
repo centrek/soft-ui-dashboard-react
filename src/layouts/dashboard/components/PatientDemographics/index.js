@@ -32,7 +32,7 @@ import { useSoftUIController, setDemographics } from "context";
 import { useTheme } from "@mui/material/styles"; // Import the useTheme hook
 
 
-function PatientDemographics({ color }) {
+function PatientDemographics({ color, Hospital, Physician, DOB, Race, MRN, FIN, Gender, LRR, LRL }) {
   const theme = useTheme(); // Access the current theme
   const [controller, dispatch] = useSoftUIController();
   const { demographics, transparentSidenav } = controller;
@@ -42,28 +42,33 @@ function PatientDemographics({ color }) {
     <Card>
       <SoftBox p={2}>
         <Grid container spacing={3}>
+          <Grid item>
+              <SoftTypography py={0} my={0} variant="h4" fontWeight="bold" gutterBottom>
+                Hospital:  {Hospital}
+              </SoftTypography>
+          </Grid>
+        </Grid>
+              
+          <Grid container spacing={3}>
           <Grid item xs={12} lg={6}>
             <SoftBox display="flex" flexDirection="column" height="100%">
               <SoftBox pt={0} mb={0.5}>
-
               </SoftBox>
-              <SoftTypography py={0} my={0} variant="h4" fontWeight="bold" gutterBottom>
-                Hospital:  Mercy d Hospital
-              </SoftTypography>
+
               <SoftTypography variant="h4" fontWeight="regular" gutterBottom>
-                Physician: Hadloupnosee, Herman
+                Physician: {Physician}
               </SoftTypography>
               <SoftBox mb={6}>
                 <SoftTypography variant="body2" color="text">
-                  DOB:  <b>03/05/1945</b>
+                  DOB:  <b>{DOB}</b>
                   <br />
-                  Race:  <b>Caucasian</b>
+                  Race:  <b>{Race}</b>
                   <br />
-                  MRN:  <b>2382282</b>
+                  MRN:  <b>{MRN}</b>
                   <br />
-                  FIN:  <b>1904383759</b>
+                  FIN:  <b>{FIN}</b>
                   <br />
-                  Gender: <b>Female</b>
+                  Gender: <b>{Gender}</b>
                   <br />
                 </SoftTypography>
               </SoftBox>
@@ -147,6 +152,7 @@ function PatientDemographics({ color }) {
 PatientDemographics.defaultProps = {
   color: "info",
   brand: "",
+  fieldsData: ""
 };
 
 // Typechecking props for the Sidenav
@@ -155,5 +161,14 @@ PatientDemographics.propTypes = {
   brand: PropTypes.string,
   brandName: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object),
+  Hospital: PropTypes.string,
+  Physician: PropTypes.string,
+  DOB: PropTypes.string,
+  Race: PropTypes.string,
+  MRN: PropTypes.number,
+  FIN: PropTypes.number,
+  Gender: PropTypes.string,
+  LRR: PropTypes.string,
+  LRL: PropTypes.string,
 };
 export default PatientDemographics;

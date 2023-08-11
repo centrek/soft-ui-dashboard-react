@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react"; // Import useCallback
 
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
@@ -57,8 +57,9 @@ import gradientLineChartData from "./data/gradientLineChartData";
 import MiniStatisticsCardNoIcon from "examples/Cards/StatisticsCards/MiniStatisticsCardNoIcon";
 import VerticalBarChart from "examples/Charts/BarCharts/VerticalBarChart";
 import HorizontalBarChart from "examples/Charts/BarCharts/HorizontalBarChart";
-import SuiDropzone from "components/SoftDropzone";
+import SoftDropzoneViewPatient from "components/SoftDropzoneViewPatient";
 import DataUploadModal from "layouts/dashboard/components/ViewDropzone"; // Import the component
+import Dropzone from "dropzone";
 
 
     
@@ -67,37 +68,81 @@ function Dashboard() {
   const { chart, items } = reportsBarChartData;
   const [modalOpen, setModalOpen] = useState(true);
   const [patientFile, setPatientFile] = useState(null);
+  const [handleFileUpload, setFileUpload] = useState(null);
+  const [fieldsData, setFieldsData] = useState(null);
+  const [initialFieldsData, setInitialFieldsData] = useState(null);
 
-  const handleFileUpload = (file) => {
-    // Process the uploaded file here
-    setPatientFile(file);
-  };
+
+ // Define the handleFileDrop function
+const handleFileDrop = useCallback((acceptedFiles) => {
+    console.log('1 acceptedFiles: ', acceptedFiles.name)
+  if (acceptedFiles) {
+    const file = acceptedFiles;
+    console.log('2 filelength: ', acceptedFiles.length)
+    const fileExtension = file.name.split('.').pop().toLowerCase();
+
+    if (fileExtension === 'tommy') {
+      console.log('it is a tommy file');
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          // Parse the dropped JSON file
+          const jsonData = JSON.parse(reader.result);
+          console.log('jsonData: ', jsonData)
+          // Update the fieldsData state with the JSON data
+          setFieldsData(jsonData);
+
+          // Store the initial dropped data in initialFieldsData
+          setInitialFieldsData(jsonData);
+
+        } catch (error) {
+          console.error('Error parsing JSON file:', error);
+        }
+      };
+
+      reader.readAsText(file);
+      console.log('file contents: ', file)
+    } else {
+      console.error('Invalid file format. Please drop a file with a .tommy extension.');
+    }
+  }
+}, [setFieldsData, setInitialFieldsData]); // Include setFieldsData in the dependency array
+
+
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <DataUploadModal open={modalOpen} onClose={() => setModalOpen(false)} onFileUpload={handleFileUpload} />
+      {!fieldsData ? (
+      <SoftDropzoneViewPatient
+              options={{ addRemoveLinks: true }}
+              handleFileDrop={handleFileDrop}
+              setFieldsData={setFieldsData} // Pass the setFieldsData prop
+              setInitialFieldsData={setInitialFieldsData}
+            />
+      
+      ):(
       <SoftBox py={3}>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
               <MiniStatisticsCardIconLeft
                 title={{ text: "Patient Name" }}
-                count="Phillipson, Suzanne"
-                percentage={{ color: "female", text: "03/05/1945" }}
+                count={fieldsData?.patient?.Name?.Last + ', ' + fieldsData?.patient?.Name?.First + ' ' + fieldsData?.patient?.Name?.Middle}
+                percentage={{ color: "female", text: fieldsData?.patient?.DOB }}
                 icon={{ color: "female", component: "sick" }}
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={2}>
               <MiniStatisticsCardNoIcon
                 title={{ text: "Date of SAH" }}
-                count="07/26/2023"
+                count={fieldsData?.patient?.DateOfSAH}
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={2}>
               <MiniStatisticsCardNoIcon
                 title={{ text: "Date of Surgery" }}
-                count="07/29/2023"
+                count={fieldsData?.patient?.DateOfOR}
               />
             </Grid>
           
@@ -106,7 +151,18 @@ function Dashboard() {
         <SoftBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
-              <PatientDemographics />
+              <PatientDemographics 
+              Hospital={fieldsData?.patient?.Hospital}
+              Physician={fieldsData?.patient?.Physician}
+              DOB={fieldsData?.patient?.DOB}
+              Race={fieldsData?.patient?.Race}
+              MRN={fieldsData?.patient?.MRN}
+              FIN={fieldsData?.patient?.FIN}
+              Gender={fieldsData?.patient?.Gender}
+              LRR={fieldsData?.patient?.Hospital}
+              LRL={fieldsData?.patient?.Hospital}
+            
+              />
             </Grid>
             <Grid item xs={12} lg={4}>
               <LindegaardRatioDefined />
@@ -166,6 +222,7 @@ function Dashboard() {
         </Grid>
         </Grid>
       </SoftBox>
+      )}
       <Footer />
     </DashboardLayout>
   );

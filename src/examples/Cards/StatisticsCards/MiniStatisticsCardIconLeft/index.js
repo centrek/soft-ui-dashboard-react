@@ -26,7 +26,7 @@ import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
 
 
-function MiniStatisticsCardIconLeft({ bgColor, title, count, percentage, icon, direction }) {
+function MiniStatisticsCardIconLeft({ bgColor, title, count, percentage, icon, direction, fieldsData}) {
   console.log("Icon Color:", icon.color); // Check if "patientFemale" is being printed
 
   return (
@@ -61,13 +61,13 @@ function MiniStatisticsCardIconLeft({ bgColor, title, count, percentage, icon, d
                   textTransform="capitalize"
                   fontWeight={title.fontWeight}
                 >
-                  {title.text}            
+                {title.text}
                     <SoftTypography variant="button" color={percentage.color} fontWeight="bold" ml={8}>
                       DOB: {percentage.text}
                     </SoftTypography>
                 </SoftTypography>
                 <SoftTypography
-                  variant="h4"
+                  variant="h3"
                   fontWeight="bold"
                   color={bgColor === "white" ? "dark" : "white"}
                   textTransform="uppercase"
@@ -139,6 +139,7 @@ MiniStatisticsCardIconLeft.propTypes = {
     component: PropTypes.node.isRequired,
   }).isRequired,
   direction: PropTypes.oneOf(["right", "left"]),
+  fieldsData: PropTypes.string
 };
 
 export default MiniStatisticsCardIconLeft;
