@@ -85,10 +85,9 @@ function Overview() {
                 <li><s>Style Sign-In Page</s></li>
                 <li><s>Design Sign-in/up Pages</s></li>
                 <li><s>Adjust Navigation to include Welcome, View, Create, Quality</s></li>
-                <li>Build Structure for displaying patient info</li>
-                <li>Populate and lock down on Create Patient</li>
-                <li>Add in dropping of .tommy</li>
-                <li>Populate and lock down on drop .tommy</li>
+                <li><s>Build Structure for displaying patient info</s></li>
+                <li><s>Add in dropping of .tommy</s></li>
+                <li>Populate all fields on drop .tommy</li>
                 <li>Other stuff here...</li>
               </SoftTypography>
             </SoftBox>
@@ -98,6 +97,10 @@ function Overview() {
             <SoftBox mb={1}>
               <SoftTypography variant="button" fontWeight="regular" color="text">
               <u>Week 2</u>
+                <li>Populate charts on drop .tommy</li>
+                <li>Add pagination of test on ViewPatient</li>
+                <li>Populate Create Patient Page</li>
+                <li>Basic style to get started</li>
                 <li>Add Edit Patient Info button with lockdown</li>
                 <li>Add download patient button</li>
                 <li>Add a New Test button</li>
