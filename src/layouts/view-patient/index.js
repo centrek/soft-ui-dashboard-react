@@ -129,8 +129,8 @@ const handleFileDrop = useCallback((acceptedFiles) => {
               <MiniStatisticsCardIconLeft
                 title={{ text: "Patient Name" }}
                 count={fieldsData?.patient?.Name?.Last + ', ' + fieldsData?.patient?.Name?.First + ' ' + fieldsData?.patient?.Name?.Middle}
-                percentage={{ color: "female", text: fieldsData?.patient?.DOB }}
-                icon={{ color: "female", component: "sick" }}
+                percentage={{ color: (fieldsData?.patient?.Gender.toLowerCase() === 'male' ? 'male' : fieldsData?.patient?.Gender.toLowerCase() === 'female' ? 'female' : 'secondary'), text: fieldsData?.patient?.DOB }}
+                icon={{ color: (fieldsData?.patient?.Gender.toLowerCase() === 'male' ? 'male' : fieldsData?.patient?.Gender.toLowerCase() === 'female' ? 'female' : 'secondary'), component: "sick" }}
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={2}>
