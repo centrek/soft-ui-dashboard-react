@@ -87,7 +87,7 @@ function Overview() {
                 <li><s>Adjust Navigation to include Welcome, View, Create, Quality</s></li>
                 <li><s>Build Structure for displaying patient info</s></li>
                 <li><s>Add in dropping of .tommy</s></li>
-                <li>After Drop, Add filename to dashboardnav and a clear jsonData button</li>
+                <li><s>After Drop, Add filename to dashboardnav and a clear jsonData button</s></li>
                 <li>Populate all fields on drop .tommy</li>
                 <li>Other stuff here...</li>
               </SoftTypography>
