@@ -116,6 +116,10 @@ function Overview() {
             <SoftBox mb={1}>
               <SoftTypography variant="button" fontWeight="regular" color="text">
               <u>Week 3, infinity and beyond</u>
+                <li>For Billing, Generate unique serial# per patient</li>
+                <li>Ensure serial# is marked paid before saving patient</li>
+                <li>Ensure serial# is marked paid before viewing patient</li>
+                <li>If serial# is not paid, do not allow view patient</li>
                 <li>Other stuff here...</li>
               </SoftTypography>
             </SoftBox>

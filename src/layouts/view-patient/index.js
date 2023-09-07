@@ -26,7 +26,7 @@ import SoftTypography from "components/SoftTypography";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import DashboardNavbar from "examples/Navbars/DashboardNavbarTomCD";
 import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
 import MiniStatisticsCardIconLeft from "examples/Cards/StatisticsCards/MiniStatisticsCardIconLeft";
@@ -60,6 +60,9 @@ import HorizontalBarChart from "examples/Charts/BarCharts/HorizontalBarChart";
 import SoftDropzoneViewPatient from "components/SoftDropzoneViewPatient";
 import DataUploadModal from "layouts/dashboard/components/ViewDropzone"; // Import the component
 import Dropzone from "dropzone";
+import { initialPatientState } from 'components/Variables';
+import { AssignmentSharp } from "@mui/icons-material";
+import { assignPatientVariables } from "components/Variables";
 
 
     
@@ -71,6 +74,9 @@ function Dashboard() {
   const [handleFileUpload, setFileUpload] = useState(null);
   const [fieldsData, setFieldsData] = useState(null);
   const [initialFieldsData, setInitialFieldsData] = useState(null);
+  const [patientDetails, setPatientDetails] = useState({});
+  const [testData, setTestData] = useState([]);
+  const [uploadedFileName, setUploadedFileName] = useState("");
 
 
  // Define the handleFileDrop function
@@ -80,6 +86,8 @@ const handleFileDrop = useCallback((acceptedFiles) => {
     const file = acceptedFiles;
     console.log('2 filelength: ', acceptedFiles.length)
     const fileExtension = file.name.split('.').pop().toLowerCase();
+    setUploadedFileName(file.name);
+
 
     if (fileExtension === 'tommy') {
       console.log('it is a tommy file');
@@ -91,6 +99,8 @@ const handleFileDrop = useCallback((acceptedFiles) => {
           console.log('jsonData: ', jsonData)
           // Update the fieldsData state with the JSON data
           setFieldsData(jsonData);
+          //assignPatientVariables(jsonData); // Populate the global variables
+
 
           // Store the initial dropped data in initialFieldsData
           setInitialFieldsData(jsonData);
@@ -98,6 +108,8 @@ const handleFileDrop = useCallback((acceptedFiles) => {
         } catch (error) {
           console.error('Error parsing JSON file:', error);
         }
+        setPatientFile(acceptedFiles[0]);
+
       };
 
       reader.readAsText(file);
@@ -108,11 +120,18 @@ const handleFileDrop = useCallback((acceptedFiles) => {
   }
 }, [setFieldsData, setInitialFieldsData]); // Include setFieldsData in the dependency array
 
-
+const removeFile = () => {
+  setFieldsData(null); // Clear fieldsData
+  setInitialFieldsData(null); // Clear initialFieldsData for consistency
+  setPatientFile(null); // Clear the patientFile state
+};
 
   return (
     <DashboardLayout>
-      <DashboardNavbar />
+      <DashboardNavbar 
+          patientFileName={uploadedFileName}        
+          removeFile={removeFile} 
+      />
       {!fieldsData ? (
       <SoftDropzoneViewPatient
               options={{ addRemoveLinks: true }}
@@ -123,7 +142,7 @@ const handleFileDrop = useCallback((acceptedFiles) => {
       
       ):(
       <SoftBox py={3}>
-        <SoftBox mb={3}>
+        <SoftBox mb={3}>            
           <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
               <MiniStatisticsCardIconLeft
