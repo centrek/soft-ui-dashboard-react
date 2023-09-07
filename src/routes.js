@@ -38,7 +38,7 @@ Coded by www.creative-tim.com
 // Soft UI Dashboard React layouts
 import Welcome from "layouts/welcome";
 import ViewPatient from "layouts/view-patient";
-import CreatePatient from "layouts/dashboard";
+import CreatePatient from "layouts/create-patient";
 import Quality from "layouts/dashboard";
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
